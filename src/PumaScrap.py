@@ -197,7 +197,6 @@ def PumaApi():
       response = requests.request("POST", url, json=payload, headers=headers)
       data = response.json()['data']['search']['nodes']
       for item in data:
-          # masterId = item['masterId']
           id = item['variantProduct']['id']
           name = item['variantProduct']['name']
           price = item['variantProduct']['price']
